@@ -1,0 +1,62 @@
+--
+-- Table structure for table `knor_project`
+--
+
+CREATE TABLE `knor_project` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `project_name` varchar(255) NOT NULL,
+  `project_desc` text NOT NULL,
+  `dt_created` datetime NOT NULL,
+  `dt_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+-- Indexes for table `knor_project`
+--
+ALTER TABLE `knor_project`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+-- AUTO_INCREMENT for table `knor_project`
+--
+ALTER TABLE `knor_project`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+
+--
+-- Table structure for table `knor_project_image`
+--
+
+CREATE TABLE `knor_project_image` (
+  `id` int(11) NOT NULL,
+  `project_image` varchar(255) NOT NULL,
+  `project_id` varchar(255) NOT NULL,
+  `dt_created` datetime NOT NULL,
+  `dt_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `knor_project_image`
+--
+ALTER TABLE `knor_project_image`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `knor_project_image`
+--
+ALTER TABLE `knor_project_image`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
