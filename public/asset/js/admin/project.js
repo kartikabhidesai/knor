@@ -1,4 +1,4 @@
-var Client = function() {
+var Project = function() {
 
     var clientList = function() {
 
@@ -88,16 +88,10 @@ var Client = function() {
         var form = $('#clientAdd');
         var rules = {
             names: {required: true},
-            email: {required: true},
-            address1: {required: true},
-            country_name: {required: true},
-            state: {required: true},
-            city: {required: true},
-            state: {required: true},
-            zipcode: {required: true},
+            address: {required: true},
         };
         handleFormValidate(form, rules, function(form) {
-            handleAjaxFormSubmit(form);
+            handleAjaxFormSubmit(form,true);
         });
     };
 
@@ -106,16 +100,10 @@ var Client = function() {
         var form = $('#clientEdit');
         var rules = {
             names: {required: true},
-            email: {required: true},
-            address1: {required: true},
-            country_name: {required: true},
-            state: {required: true},
-            city: {required: true},
-            state: {required: true},
-            zipcode: {required: true},
+            address: {required: true},
         };
         handleFormValidate(form, rules, function(form) {
-            handleAjaxFormSubmit(form);
+           handleAjaxFormSubmit(form,true);
         });
     };
     

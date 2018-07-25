@@ -9,4 +9,5 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 define("TABLE_USER", "user");
 define("TABLE_COUNTRIES", "countries");
-define("TABLE_USER_DETAILS", "user_details");
+define("TABLE_PROJECT", "knor_project");
+define("TABLE_PROJECT_IMAGES", "knor_project_image");
