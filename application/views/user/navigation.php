@@ -9,20 +9,20 @@
                     <!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="clear" style='width: 50%'>
                             <span class="block m-t-xs">
-                                <strong class="font-bold"><?= $this->session->userdata['client_login']['firstname'] ?> </strong>
-                            </span> <span class="text-muted text-xs block"><?= $this->session->userdata['client_login']['lastname'] ?> <b class="caret"></b></span>
+                                <strong class="font-bold"><?= $this->session->userdata['user_login']['firstname'] ?> </strong>
+                            </span> <span class="text-muted text-xs block"><?= $this->session->userdata['user_login']['lastname'] ?> <b class="caret"></b></span>
                         </span>
                     </a>-->
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
                         <li><a href="<?php echo base_url();?>account/logout/C">Logout</a></li>
                     </ul>
                 </div>
-                <div class="logo-element">
-                    IN+
-                </div>
             </li>
             <li class="">
-                <a href="javascript:;"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                <a href="<?= user_url(); ?>dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+            </li>
+            <li class="<?= $user; ?>">
+                <a href="<?= user_url(); ?>Project"><i class="fa fa-tasks"></i> <span class="nav-label">Project</span></a>
             </li>
         </ul>
     </div>

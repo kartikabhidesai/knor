@@ -1,6 +1,6 @@
 <?php
 
-class Project extends Admin_Controller {
+class Project extends User_Controller {
 
     function __construct() {
         parent::__construct();
@@ -9,7 +9,7 @@ class Project extends Admin_Controller {
     }
 
     function index() {
-        $data['page'] = "admin/project/index";
+        $data['page'] = "user/project/index";
         $data['user'] = 'active';
         $data['pagetitle'] = 'Project';
         $data['var_meta_title'] = 'Project';
@@ -30,12 +30,12 @@ class Project extends Admin_Controller {
         );
          $data['getComany'] = $this->this_model->getDetail();
 //         print_r($data['getComany']);exit;
-        $this->load->view(ADMIN_LAYOUT, $data);
+        $this->load->view(USER_LAYOUT, $data);
     }
 
     function add() {
         
-        $data['page'] = "admin/project/add";
+        $data['page'] = "user/project/add";
         $data['user'] = 'active';
         $data['pagetitle'] = 'Project';
         $data['var_meta_title'] = 'Project';
@@ -60,16 +60,16 @@ class Project extends Admin_Controller {
             echo json_encode($res);  
             exit();
         }
-        $this->load->view(ADMIN_LAYOUT, $data);
+        $this->load->view(USER_LAYOUT, $data);
     }
 
     function edit($id) {
         $companyId = $this->utility->decode($id);
         if (!ctype_digit($companyId)) {
-            redirect(admin_url() . 'project');
+            redirect(user_url() . 'project');
         }
 
-        $data['page'] = "admin/project/edit";
+        $data['page'] = "user/project/edit";
         $data['user'] = 'active';
         $data['pagetitle'] = 'Project';
         $data['var_meta_title'] = 'Project';
@@ -97,7 +97,7 @@ class Project extends Admin_Controller {
             echo json_encode($res);
             exit();
         }
-        $this->load->view(ADMIN_LAYOUT, $data);
+        $this->load->view(USER_LAYOUT, $data);
     }
 
     function projectDelete() {

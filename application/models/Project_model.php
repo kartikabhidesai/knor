@@ -19,6 +19,7 @@ class Project_model extends My_model {
 
         $data['insert']['project_name'] = $postData['names'];
         $data['insert']['project_desc'] = $postData['address'];
+        $data['insert']['user_id'] = $this->session->userdata['user_login']['id'];
         $data['insert']['dt_created'] = DATE_TIME;
         $data['insert']['dt_updated'] = DATE_TIME;
         $data['table'] = TABLE_PROJECT;
@@ -43,6 +44,7 @@ class Project_model extends My_model {
                         
                         if($this->upload->do_upload('file')){
                             $fileData = $this->upload->data();
+                           
                             $dataImage['insert']['project_image'] = $fileData['file_name'];
                             $dataImage['insert']['project_id'] = $projectId;
                             $dataImage['insert']['dt_created'] = DATE_TIME;
@@ -56,7 +58,7 @@ class Project_model extends My_model {
         if ($result) {
             $json_response['status'] = 'success';
             $json_response['message'] = 'Project added successfully.';
-            $json_response['redirect'] = admin_url() . 'project';
+            $json_response['redirect'] = user_url() . 'project';
         } else {
             $json_response['status'] = 'error';
             $json_response['message'] = 'something will be wrong';
@@ -141,7 +143,7 @@ class Project_model extends My_model {
         if ($result) {
             $json_response['status'] = 'success';
             $json_response['message'] = 'Project edit successfully';
-            $json_response['redirect'] = admin_url() . 'project';
+            $json_response['redirect'] = user_url() . 'project';
         } else {
             $json_response['status'] = 'error';
             $json_response['message'] = 'Somethig will be wrong.';
