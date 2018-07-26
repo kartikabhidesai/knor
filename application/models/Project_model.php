@@ -109,8 +109,8 @@ class Project_model extends My_model {
         $data['table'] = TABLE_PROJECT;
         $result = $this->updateRecords($data);
         if(!empty($_FILES['project_image']['name'])){
-              $this->db->where('project_id',  $projectId);
-              $result = $this->db->delete(TABLE_PROJECT_IMAGES);
+            //   $this->db->where('project_id',  $projectId);
+            //   $result = $this->db->delete(TABLE_PROJECT_IMAGES);
                     $filesCount = count($_FILES['project_image']['name']);
                     for($i = 0; $i < $filesCount; $i++){
                         $ext = end((explode(".", $_FILES['project_image']['name'][$i])));
