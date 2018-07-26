@@ -34,6 +34,9 @@
                                             <a data-toggle="tooltip" title="Delete" data-placement="top" data-toggle="modal" data-target="#myModal_autocomplete" data-href="<?= user_url().'project/projectDelete'?>" data-id="<?php echo $getComany[$i]->projectID;?>" class="deletebutton">
                                                 <i class="fa fa-close text-navy"></i>
                                             </a>
+                                            <a data-toggle="tooltip" title="View" data-placement="top"  href="<?= user_url().'project/view/' . $this->utility->encode($getComany[$i]->projectID); ?>" data-id="<?php echo $getComany[$i]->projectID;?>" class="deletebutton">
+                                                <i class="fa fa-eye text-navy"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                     <?php } ?>

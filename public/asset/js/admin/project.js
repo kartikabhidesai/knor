@@ -24,9 +24,9 @@ var Project = function() {
             ]
 
         });
-        
-        
-         $('body').on('click', '.interestedlist', function() {
+
+
+        $('body').on('click', '.interestedlist', function() {
             var muckId = $(this).attr('data-id');
             var data = '';
             if (muckId != "")
@@ -37,38 +37,38 @@ var Project = function() {
                 });
             }
         });
-         $('body').on('click', '.acceptinterest', function() {
+        $('body').on('click', '.acceptinterest', function() {
             var userInterestId = $(this).attr('data-id');
             var muckId = $(this).attr('data-muckid');
             var data = '';
             if (muckId != "")
             {
-                data = {'muckId': muckId,'userInterestId':userInterestId, '_token': $("input[name=_token]").val()};
+                data = {'muckId': muckId, 'userInterestId': userInterestId, '_token': $("input[name=_token]").val()};
                 ajaxcall(baseurl + 'company/update-interest-status', data, function(output) {
                     handleAjaxResponse(output);
-                    setTimeout(function(){
+                    setTimeout(function() {
                         $('#myModal_interested').modal('hide');
-                    },2000);
+                    }, 2000);
                 });
             }
         });
-         $('body').on('click', '.complete', function() {
+        $('body').on('click', '.complete', function() {
             var userInterestId = $(this).attr('data-id');
             var muckId = $(this).attr('data-muckid');
             var data = '';
             if (muckId != "")
             {
-                data = {'muckId': muckId,'userInterestId':userInterestId, '_token': $("input[name=_token]").val()};
+                data = {'muckId': muckId, 'userInterestId': userInterestId, '_token': $("input[name=_token]").val()};
                 ajaxcall(baseurl + 'company/update-interest-status-to-complete', data, function(output) {
                     handleAjaxResponse(output);
-                    setTimeout(function(){
+                    setTimeout(function() {
                         $('#myModal_interested').modal('hide');
-                    },2000);
+                    }, 2000);
                 });
             }
         });
-         $('body').on('click', '.resetall', function() {
-           
+        $('body').on('click', '.resetall', function() {
+
             var muckId = $(this).attr('data-muckid');
             var data = '';
             if (muckId != "")
@@ -76,9 +76,9 @@ var Project = function() {
                 data = {'muckId': muckId, '_token': $("input[name=_token]").val()};
                 ajaxcall(baseurl + 'company/reset-interest-status', data, function(output) {
                     handleAjaxResponse(output);
-                    setTimeout(function(){
+                    setTimeout(function() {
                         $('#myModal_interested').modal('hide');
-                    },2000);
+                    }, 2000);
                 });
             }
         });
@@ -91,26 +91,50 @@ var Project = function() {
             address: {required: true},
         };
         handleFormValidate(form, rules, function(form) {
-            handleAjaxFormSubmit(form,true);
+            handleAjaxFormSubmit(form, true);
         });
     };
 
     var clientEdit = function() {
-       
+
         var form = $('#clientEdit');
         var rules = {
             names: {required: true},
             address: {required: true},
         };
         handleFormValidate(form, rules, function(form) {
-           handleAjaxFormSubmit(form,true);
+            handleAjaxFormSubmit(form, true);
         });
+
+        var form = $('#updateImage');
+        var rules = {
+            'project_image[]': {required: true},
+        };
+        handleFormValidate(form, rules, function(form) {
+            handleAjaxFormSubmit(form, true);
+        });
+
+        $('body').on('click', '.edit', function() {
+            var personId = $(this).attr('data-id');
+            $('#imageId').val(personId);
+            $('#myModal_image').modal('show');
+        });
+
+        $('body').on('click', '.deleteImage', function() {
+            var personId = $(this).attr('data-id');
+            var dataUrl = $(this).attr('data-href');
+            $('#btndelete').attr('data-url', dataUrl);
+            $('#btndelete').attr('data-id', personId);
+            $('#myModal_autocomplete').modal('show');
+
+        });
+        handleDelete();
     };
-    
-    
+
+
     var clientDetail = function() {
-       
-        
+
+
         $('.dataTables-example').DataTable({
             pageLength: 25,
             responsive: true,
@@ -131,41 +155,40 @@ var Project = function() {
 
         });
     };
-    
-    var addNewPerson = function(){
+
+    var addNewPerson = function() {
         var form = $('#addNewPerson');
         var rules = {
             person_fname: {required: true},
             person_lname: {required: true},
-            person_email: {required: true,email:true},
+            person_email: {required: true, email: true},
             company_password: {required: true},
-            company_confirm_password: {required: true,equalTo:'#password'},
+            company_confirm_password: {required: true, equalTo: '#password'},
             company_user_phone: {required: true},
             address: {required: true},
-            
         };
         handleFormValidate(form, rules, function(form) {
             handleAjaxFormSubmit(form);
         });
     }
-    
-    var gneral = function(){
-        $('.openPopup').click(function(){
+
+    var gneral = function() {
+        $('.openPopup').click(function() {
             $('#addNewPerson')[0].reset();
             var companyId = $(this).attr('data-company-id');
             var personId = $(this).attr('data-id');
-            if(typeof personId === 'undefined'){
+            if (typeof personId === 'undefined') {
                 $('#myModal_addnewperson').modal('show');
                 $('#company_id').val(companyId);
-            }else{
-               var url = baseurl + 'admin/client/getPersonInfo';
-               var data = { companyId : companyId , personId : personId};
-                ajaxcall(url,data,function(output){
+            } else {
+                var url = baseurl + 'admin/client/getPersonInfo';
+                var data = {companyId: companyId, personId: personId};
+                ajaxcall(url, data, function(output) {
                     var output = JSON.parse(output);
                     $('.modal-title').text('Edit Person')
                     $('.password').hide();
                     $('.company_confirm_password').hide();
-                    $('#person_email').attr('readonly',true);
+                    $('#person_email').attr('readonly', true);
                     $('#person_email').val(output[0].email);
                     $('#company_id').val(companyId);
                     $('#person_fname').val(output[0].first_name);
@@ -173,24 +196,24 @@ var Project = function() {
                     $('#company_user_phone').val(output[0].phone_no);
                     $('#address').val(output[0].address);
                     $('#person_id').val(personId);
-                    
+
                     $('#myModal_addnewperson').modal('show');
                 });
             }
-            
+
         });
-        
-        $('body').on('click','.deletebutton',function(){
+
+        $('body').on('click', '.deletebutton', function() {
             var personId = $(this).attr('data-id');
             var dataUrl = $(this).attr('data-href');
-            $('#btndelete').attr('data-url',dataUrl);
-            $('#btndelete').attr('data-id',personId);
+            $('#btndelete').attr('data-url', dataUrl);
+            $('#btndelete').attr('data-id', personId);
             $('#myModal_autocomplete').modal('show');
-            
+
         });
         handleDelete();
     }
-    
+
     return {
         //main function to initiate the module
         clientList: function() {
