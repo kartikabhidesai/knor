@@ -66,7 +66,7 @@ class Project_model extends My_model {
         return $json_response;
     }
 
-    function getDetail() {
+    function getDetail($userId = null) {
         $data['select'] = ['c.project_name',
             'c.id as projectID',
             'c.project_desc',
@@ -78,6 +78,9 @@ class Project_model extends My_model {
             ],
         ];
         $data['groupBy'] = 'c.id';
+        if(!empty($userId)){
+             $data['where'] = ['pi.user_id' => $projectId];
+        }
         $data['table'] = TABLE_PROJECT . ' c';
         $result = $this->selectFromJoin($data);
         return $result;

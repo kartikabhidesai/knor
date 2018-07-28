@@ -24,6 +24,9 @@
             <li class="<?= $dashboard; ?>">
                 <a href="<?= admin_url(); ?>dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
             </li>
+            <li class="<?= $user; ?>">
+                <a href="<?= admin_url(); ?>project"><i class="fa fa-tasks"></i> <span class="nav-label">Project</span></a>
+            </li>
         </ul>
     </div>
 </nav>

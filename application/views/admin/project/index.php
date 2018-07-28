@@ -5,11 +5,11 @@
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
                         <h5>Project List</h5>
-                        <div class="ibox-tools">
+<!--                        <div class="ibox-tools">
                             <a href="<?= user_url(); ?>project/add" class="btn btn-primary">
                                 <i class="fa fa-plus"></i> Add New
                             </a>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="ibox-content">
 
@@ -28,13 +28,13 @@
                                         <td><?= $getComany[$i]->project_name; ?></td>
                                         <td><?= $getComany[$i]->project_desc; ?></td>
                                         <td class="tooltip-demo">
-                                            <a data-toggle="tooltip" title="Edit project Details" data-placement="top" href="<?= user_url(); ?>project/edit/<?php echo $this->utility->encode($getComany[$i]->projectID);?>">
+<!--                                            <a data-toggle="tooltip" title="Edit project Details" data-placement="top" href="<?= user_url(); ?>project/edit/<?php echo $this->utility->encode($getComany[$i]->projectID);?>">
                                                 <i class="fa fa-edit text-navy"></i>
                                             </a>
                                             <a data-toggle="tooltip" title="Delete" data-placement="top" data-toggle="modal" data-target="#myModal_autocomplete" data-href="<?= user_url().'project/projectDelete'?>" data-id="<?php echo $getComany[$i]->projectID;?>" class="deletebutton">
                                                 <i class="fa fa-close text-navy"></i>
-                                            </a>
-                                            <a data-toggle="tooltip" title="View" data-placement="top"  href="<?= user_url().'project/view/' . $this->utility->encode($getComany[$i]->projectID); ?>" data-id="<?php echo $getComany[$i]->projectID;?>" class="">
+                                            </a>-->
+                                            <a data-toggle="tooltip" title="View" data-placement="top"  href="<?= admin_url().'project/view/' . $this->utility->encode($getComany[$i]->projectID); ?>" data-id="<?php echo $getComany[$i]->projectID;?>" class="">
                                                 <i class="fa fa-eye text-navy"></i>
                                             </a>
                                         </td>
