@@ -21,8 +21,13 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
         <script>
-            var baseurl = "<?= base_url()?>index.php/";
+            var baseurl = "<?= base_url() ?>index.php/";
         </script>
+        <style>
+            .form-group.has-error input {
+                border-color: red;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation -->
@@ -48,7 +53,7 @@
                             <a class="nav-link js-scroll-trigger" href="<?= base_url() ?>#aboutus">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" class="nav-link js-scroll-trigger" href="#">File Upload</a>
+                            <a data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" class="nav-link js-scroll-trigger" href="#">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="<?= base_url() ?>#contact">Contact Us</a>

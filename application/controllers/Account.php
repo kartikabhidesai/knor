@@ -80,6 +80,7 @@ class Account extends Admin_Controller {
             $this->session->unset_userdata('valid_login');
         }else if($type == 'C'){
             $this->session->unset_userdata('user_login');
+             redirect(base_url_index());
        }else{
             $this->session->sess_destroy();
        }

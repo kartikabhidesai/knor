@@ -11,12 +11,25 @@ var Login = function () {
             handleAjaxFormSubmit(form);
         });
     };
+    var frontLogin = function () {
+        var form = $('#userLogin');
+        var rules = {
+            email: {required: true,email:true},
+            password: {required: true},
+        };
+        handleFormValidate(form, rules, function (form) {
+            handleAjaxFormSubmit(form);
+        });
+    };
 
 
     return {
         //main function to initiate the module
         init: function () {
             loginInt();
+        },
+        frontInit: function () {
+          frontLogin();
         }
     };
 }();
