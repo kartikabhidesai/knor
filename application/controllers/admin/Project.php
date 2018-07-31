@@ -10,7 +10,7 @@ class Project extends Admin_Controller {
 
     function index() {
         $data['page'] = "admin/project/index";
-        $data['user'] = 'active';
+        $data['project'] = 'active';
         $data['pagetitle'] = 'Project';
         $data['var_meta_title'] = 'Project';
         $data['breadcrumb'] = array(
@@ -28,7 +28,7 @@ class Project extends Admin_Controller {
         $data['init'] = array(
             'Project.clientList()',
         );
-        $data['getComany'] = $this->this_model->getDetail();
+        $data['getComany'] = $this->this_model->getDetailV2();
 //         print_r($data['getComany']);exit;
         $this->load->view(ADMIN_LAYOUT, $data);
     }
@@ -40,7 +40,7 @@ class Project extends Admin_Controller {
         }
 
         $data['page'] = "admin/project/view";
-        $data['user'] = 'active';
+        $data['project'] = 'active';
         $data['pagetitle'] = 'view';
         $data['var_meta_title'] = 'view';
         $data['breadcrumb'] = array(

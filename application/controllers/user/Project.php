@@ -28,7 +28,8 @@ class Project extends User_Controller {
         $data['init'] = array(
             'Project.clientList()',
         );
-        $data['getComany'] = $this->this_model->getDetail($this->session->userdata['user_login']['id']);
+        $id = $this->session->userdata['user_login']['id'];
+        $data['getComany'] = $this->this_model->getDetail($id);
 //         print_r($data['getComany']);exit;
         $this->load->view(USER_LAYOUT, $data);
     }

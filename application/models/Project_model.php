@@ -66,6 +66,22 @@ class Project_model extends My_model {
         return $json_response;
     }
 
+    function getDetailV2() {
+        $data['select'] = ['c.project_name',
+            'c.id as projectID',
+            'c.project_desc',
+        ];
+        $data['join'] = [
+            TABLE_PROJECT_IMAGES . ' as pi' => [
+                'c.id = pi.project_id',
+                'LEFT',
+            ],
+        ];
+        $data['groupBy'] = 'c.id';
+        $data['table'] = TABLE_PROJECT . ' c';
+        $result = $this->selectFromJoin($data);
+        return $result;
+    }
     function getDetail($userId = null) {
         $data['select'] = ['c.project_name',
             'c.id as projectID',
@@ -78,9 +94,7 @@ class Project_model extends My_model {
             ],
         ];
         $data['groupBy'] = 'c.id';
-        if(!empty($userId)){
-             $data['where'] = ['pi.user_id' => $projectId];
-        }
+        $data['where'] = ['c.user_id' => $userId];
         $data['table'] = TABLE_PROJECT . ' c';
         $result = $this->selectFromJoin($data);
         return $result;
