@@ -55,7 +55,7 @@
                             <a class="nav-link js-scroll-trigger" href="<?= base_url() ?>#aboutus">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" class="nav-link js-scroll-trigger" href="#">Login</a>
+                            <a data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap" class="nav-link js-scroll-trigger" href="#">File Upload</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="<?= base_url() ?>#contact">Contact Us</a>
