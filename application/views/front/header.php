@@ -18,6 +18,8 @@
         <?php if ($pages == 'ourwork') { ?>
             <link href="<?= base_url() ?>public/front/css/worknav.css" rel="stylesheet">
         <?php } ?>
+        <link rel="stylesheet" href="<?= base_url() ?>public/asset/css/plugins/toastr/toastr.min.css" />
+
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
         <script>
