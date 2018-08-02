@@ -84,27 +84,109 @@ var Project = function() {
         });
     };
 
+
     var clientAdd = function() {
-        var form = $('#clientAdd');
-        var rules = {
-            names: {required: true},
-            address: {required: true},
-        };
-        handleFormValidate(form, rules, function(form) {
-            handleAjaxFormSubmit(form, true);
+
+        $('#uploadForm').submit(function(e) {
+            if ($('#name_add').val() == '') {
+                $('#name_add').closest('.form-group').addClass('has-error');
+                return false;
+            } else {
+                $('#name_add').closest('.form-group').removeClass('has-error');
+            }
+            if ($('#address').val() == '') {
+                $('#address').closest('.form-group').addClass('has-error');
+                return false;
+            } else {
+                $('#address').closest('.form-group').removeClass('has-error');
+            }
+//            if ($('#userImage').val() && $('#name_add').val() && $('#address').val()) {
+                e.preventDefault();
+                $('#loader-icon').show();
+                $(this).ajaxSubmit({
+                    target: '#targetLayer',
+                    beforeSubmit: function() {
+                        $("#progress-bar").width('0%');
+                    },
+                    uploadProgress: function(event, position, total, percentComplete) {
+                        $("#progress-bar").width(percentComplete + '%');
+                        $("#progress-bar").html('<div id="progress-status">' + percentComplete + ' %</div>')
+                        if (percentComplete > 90) {
+                            showToster('success', 'Project added successfully', '');
+                            setTimeout(function() {
+                                location.reload();
+                            }, 8000);
+                        }
+                    },
+                    success: function(output) {
+                        handleAjaxResponse(output);
+                    },
+                    resetForm: true
+                });
+                return false;
+//            }
         });
+
+//        var form = $('#clientAdd');
+//        var rules = {
+//            names: {required: true},
+//            address: {required: true},
+//        };
+//        handleFormValidate(form, rules, function(form) {
+//            handleAjaxFormSubmit(form, true);
+//        });
     };
 
     var clientEdit = function() {
 
-        var form = $('#clientEdit');
-        var rules = {
-            names: {required: true},
-            address: {required: true},
-        };
-        handleFormValidate(form, rules, function(form) {
-            handleAjaxFormSubmit(form, true);
+        $('#uploadForm').submit(function(e) {
+            if ($('#edit_name').val() == '') {
+                $('#edit_name').closest('.form-group').addClass('has-error');
+                return false;
+            } else {
+                $('#edit_name').closest('.form-group').removeClass('has-error');
+            }
+            if ($('#edit_address').val() == '') {
+                $('#edit_address').closest('.form-group').addClass('has-error');
+                return false;
+            } else {
+                $('#edit_address').closest('.form-group').removeClass('has-error');
+            }
+//            if ($('#userImage').val() && $('#edit_name').val() && $('#edit_address').val()) {
+            e.preventDefault();
+            $('#loader-icon').show();
+            $(this).ajaxSubmit({
+                target: '#targetLayer',
+                beforeSubmit: function() {
+                    $("#progress-bar").width('0%');
+                },
+                uploadProgress: function(event, position, total, percentComplete) {
+                    $("#progress-bar").width(percentComplete + '%');
+                    $("#progress-bar").html('<div id="progress-status">' + percentComplete + ' %</div>')
+                    if (percentComplete > 90) {
+                        showToster('success', 'Project Edit successfully', '');
+                        setTimeout(function() {
+                            location.reload();
+                        }, 8000)
+                    }
+                },
+                success: function(output) {
+                    handleAjaxResponse(output);
+                },
+                resetForm: true
+            });
+            return false;
+//            }
         });
+
+//        var form = $('#clientEdit');
+//        var rules = {
+//            names: {required: true},
+//            address: {required: true},
+//        };
+//        handleFormValidate(form, rules, function(form) {
+//            handleAjaxFormSubmit(form, true);
+//        });
 
         var form = $('#updateImage');
         var rules = {

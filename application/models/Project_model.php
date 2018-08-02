@@ -14,7 +14,9 @@ class Project_model extends My_model {
     }
 
     function addProjectDetail($postData, $file) {
-
+//        print_r($postData);
+//        print_r($file);
+//        exit;
         $this->load->library('upload', $config);
 
         $data['insert']['project_name'] = $postData['names'];
@@ -58,7 +60,8 @@ class Project_model extends My_model {
         if ($result) {
             $json_response['status'] = 'success';
             $json_response['message'] = 'Project added successfully.';
-            $json_response['redirect'] = user_url() . 'project';
+//            $json_response['redirect'] = user_url() . 'project';
+            $json_response['jscode'] = 'setTimeout(function(){location.reload();},1000)';
         } else {
             $json_response['status'] = 'error';
             $json_response['message'] = 'something will be wrong';
@@ -82,6 +85,7 @@ class Project_model extends My_model {
         $result = $this->selectFromJoin($data);
         return $result;
     }
+
     function getDetail($userId = null) {
         $data['select'] = ['c.project_name',
             'c.id as projectID',
@@ -160,8 +164,9 @@ class Project_model extends My_model {
         unset($data);
         if ($result) {
             $json_response['status'] = 'success';
-            $json_response['message'] = 'Project edit successfully';
-            $json_response['redirect'] = user_url() . 'project';
+//            $json_response['message'] = 'Project edit successfully';
+//            $json_response['redirect'] = user_url() . 'project';
+            $json_response['jscode'] = 'setTimeout(function(){location.reload();},1000)';
         } else {
             $json_response['status'] = 'error';
             $json_response['message'] = 'Somethig will be wrong.';
