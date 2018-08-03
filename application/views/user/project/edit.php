@@ -12,10 +12,7 @@
             <div class="form-group headingmain">						
                 <h2 class="title" style="margin:10px">Project Add</h2>								
             </div>
-            <div class="form-group ">
-                <label class="col-sm-3 control-label"></label>
-                <div id="progress-div" class="col-sm-7"><div id="progress-bar"></div></div>
-            </div>
+
             <div class="form-group">
                 <label class="col-sm-3 control-label">Name*</label>
                 <div class="col-sm-7">
@@ -49,7 +46,10 @@
                     ?>
                 </div>
             </div>
-
+            <div class="form-group ">
+                <label class="col-sm-3 control-label"></label>
+                <div id="progress-div" class="col-sm-7"><div id="progress-bar"></div></div>
+            </div>
             <div class="form-group">
                 <div class="col-sm-4 col-sm-offset-3">
                     <button class="btn btn-primary" type="submit">Edit</button>

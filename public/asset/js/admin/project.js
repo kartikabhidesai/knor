@@ -101,29 +101,34 @@ var Project = function() {
                 $('#address').closest('.form-group').removeClass('has-error');
             }
 //            if ($('#userImage').val() && $('#name_add').val() && $('#address').val()) {
-                e.preventDefault();
-                $('#loader-icon').show();
-                $(this).ajaxSubmit({
-                    target: '#targetLayer',
-                    beforeSubmit: function() {
-                        $("#progress-bar").width('0%');
-                    },
-                    uploadProgress: function(event, position, total, percentComplete) {
-                        $("#progress-bar").width(percentComplete + '%');
-                        $("#progress-bar").html('<div id="progress-status">' + percentComplete + ' %</div>')
-                        if (percentComplete > 90) {
+            e.preventDefault();
+            $('#loader-icon').show();
+            $(this).ajaxSubmit({
+                target: '#targetLayer',
+                beforeSubmit: function() {
+                    $("#progress-bar").width('0%');
+                },
+                uploadProgress: function(event, position, total, percentComplete) {
+
+                    $("#progress-bar").width(percentComplete + '%');
+                    $("#progress-bar").html('<div id="progress-status">' + percentComplete + ' %</div>')
+                    var status = true;
+                    if (percentComplete > 90) {
+                        if (status == true) {
                             showToster('success', 'Project added successfully', '');
-                            setTimeout(function() {
-                                location.reload();
-                            }, 8000);
                         }
-                    },
-                    success: function(output) {
-                        handleAjaxResponse(output);
-                    },
-                    resetForm: true
-                });
-                return false;
+                        setTimeout(function() {
+                            location.reload();
+                        }, 8000);
+                        status = false;
+                    }
+                },
+                success: function(output) {
+                    handleAjaxResponse(output);
+                },
+                resetForm: true
+            });
+            return false;
 //            }
         });
 
@@ -163,11 +168,15 @@ var Project = function() {
                 uploadProgress: function(event, position, total, percentComplete) {
                     $("#progress-bar").width(percentComplete + '%');
                     $("#progress-bar").html('<div id="progress-status">' + percentComplete + ' %</div>')
+                   var status = true;
                     if (percentComplete > 90) {
-                        showToster('success', 'Project Edit successfully', '');
+                        if (status == true) {
+                            showToster('success', 'Project Edit successfully', '');
+                        }
                         setTimeout(function() {
                             location.reload();
-                        }, 8000)
+                        }, 8000);
+                        status = false;
                     }
                 },
                 success: function(output) {

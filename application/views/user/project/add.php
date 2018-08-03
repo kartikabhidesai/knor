@@ -15,10 +15,7 @@
                 <h2 class="title" style="margin:10px">Project Add</h2>								
             </div>
 
-            <div class="form-group ">
-                <label class="col-sm-3 control-label"></label>
-                <div id="progress-div" class="col-sm-7"><div id="progress-bar"></div></div>
-            </div>
+           
             <div class="form-group">
                 <label class="col-sm-3 control-label">Name*</label>
                 <div class="col-sm-7">
@@ -45,6 +42,10 @@
                     <button class="btn btn-primary" type="submit">Add</button>
                     <button class="btn btn-white" type="reset">Cancel</button>
                 </div>
+            </div>
+             <div class="form-group ">
+                <label class="col-sm-3 control-label"></label>
+                <div id="progress-div" class="col-sm-7"><div id="progress-bar"></div></div>
             </div>
         </form>
     </div>
