@@ -102,6 +102,7 @@ var Project = function() {
             }
 //            if ($('#userImage').val() && $('#name_add').val() && $('#address').val()) {
             e.preventDefault();
+            var status = 0;
             $('#loader-icon').show();
             $(this).ajaxSubmit({
                 target: '#targetLayer',
@@ -109,18 +110,16 @@ var Project = function() {
                     $("#progress-bar").width('0%');
                 },
                 uploadProgress: function(event, position, total, percentComplete) {
-
                     $("#progress-bar").width(percentComplete + '%');
                     $("#progress-bar").html('<div id="progress-status">' + percentComplete + ' %</div>')
-                    var status = true;
                     if (percentComplete > 90) {
-                        if (status == true) {
+                        if (status == 0) {
                             showToster('success', 'Project added successfully', '');
                         }
                         setTimeout(function() {
                             location.reload();
                         }, 8000);
-                        status = false;
+                        status += 1;
                     }
                 },
                 success: function(output) {
@@ -160,6 +159,7 @@ var Project = function() {
 //            if ($('#userImage').val() && $('#edit_name').val() && $('#edit_address').val()) {
             e.preventDefault();
             $('#loader-icon').show();
+             var status = 0;
             $(this).ajaxSubmit({
                 target: '#targetLayer',
                 beforeSubmit: function() {
@@ -168,15 +168,14 @@ var Project = function() {
                 uploadProgress: function(event, position, total, percentComplete) {
                     $("#progress-bar").width(percentComplete + '%');
                     $("#progress-bar").html('<div id="progress-status">' + percentComplete + ' %</div>')
-                   var status = true;
                     if (percentComplete > 90) {
-                        if (status == true) {
+                        if (status == 0) {
                             showToster('success', 'Project Edit successfully', '');
                         }
                         setTimeout(function() {
                             location.reload();
                         }, 8000);
-                        status = false;
+                        status += 1;
                     }
                 },
                 success: function(output) {
