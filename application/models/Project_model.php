@@ -18,7 +18,7 @@ class Project_model extends My_model {
 //        print_r($file);
 //        exit;
         $this->load->library('upload', $config);
-
+        $message = '';
         $data['insert']['project_name'] = $postData['names'];
         $data['insert']['project_desc'] = $postData['address'];
         $data['insert']['user_id'] = $this->session->userdata['user_login']['id'];
@@ -43,8 +43,8 @@ class Project_model extends My_model {
 
                 $this->load->library('upload', $config);
                 $this->upload->initialize($config);
-
                 if ($this->upload->do_upload('file')) {
+                    
                     $fileData = $this->upload->data();
 
                     $dataImage['insert']['project_image'] = $fileData['file_name'];
@@ -53,6 +53,8 @@ class Project_model extends My_model {
                     $dataImage['insert']['dt_updated'] = DATE_TIME;
                     $dataImage['table'] = TABLE_PROJECT_IMAGES;
                     $result = $this->insertRecord($dataImage);
+                }else{
+                     $message = $this->upload->display_errors();
                 }
             }
         }
@@ -64,7 +66,7 @@ class Project_model extends My_model {
             $json_response['jscode'] = 'setTimeout(function(){location.reload();},1000)';
         } else {
             $json_response['status'] = 'error';
-            $json_response['message'] = 'something will be wrong';
+            $json_response['message'] = $message;
         }
         return $json_response;
     }
@@ -73,14 +75,21 @@ class Project_model extends My_model {
         $data['select'] = ['c.project_name',
             'c.id as projectID',
             'c.project_desc',
+            'c.dt_updated',
+            'user.first_name',
         ];
         $data['join'] = [
             TABLE_PROJECT_IMAGES . ' as pi' => [
                 'c.id = pi.project_id',
                 'LEFT',
             ],
+            TABLE_USER . ' as user' => [
+                'c.user_id = user.id',
+                'LEFT',
+            ],
         ];
         $data['groupBy'] = 'c.id';
+        $data['order'] = 'c.dt_updated desc';
         $data['table'] = TABLE_PROJECT . ' c';
         $result = $this->selectFromJoin($data);
         return $result;

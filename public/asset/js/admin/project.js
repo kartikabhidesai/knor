@@ -117,7 +117,7 @@ var Project = function() {
                             showToster('success', 'Project added successfully', '');
                         }
                         setTimeout(function() {
-                            location.reload();
+//                            location.reload();
                         }, 8000);
                         status += 1;
                     }

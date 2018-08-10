@@ -4,6 +4,8 @@ class Dashboard extends Admin_Controller {
 
     function __construct() {
         parent::__construct();
+        $this->load->model('Project_model', 'this_model');
+
     }
 
     function index() {
@@ -15,6 +17,9 @@ class Dashboard extends Admin_Controller {
             'dashboard'=>'Home',
             'dashboard1'=>'Dashboard',
         );
+        
+        $data['getProject'] = $this->this_model->getDetailV2();
+        
         $data['css'] = array(
         );
         $data['css_plugin'] = array(
