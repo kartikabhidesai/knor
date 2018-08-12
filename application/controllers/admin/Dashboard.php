@@ -28,8 +28,6 @@ class Dashboard extends Admin_Controller {
             'plugins/dataTables/datatables.min.js',
             'admin/signup.js',
         );
-        $data['css'] = array(
-        );
         $data['css_plugin'] = array(
         );
      

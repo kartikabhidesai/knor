@@ -1,6 +1,6 @@
-<div class="wrapper wrapper-content">
+<div class="wrapper wrapper-content white-bg m-t " style="margin-bottom: 20px;">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <div class="ibox float-e-margins">
 
                 <div class="ibox-content">
@@ -10,16 +10,30 @@
                         <?php
                         for ($j = 0; $j < count($projectDetail); $j++) {
                             if (!empty($projectDetail[$j]->project_image)) {
-                                if (file_exists("uploads/project/" . $projectDetail[$j]->project_image)) {
-                                    ?>
-                                    <a href="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>" title="Image from Unsplash" data-gallery=""><img style="width:150px !important;" src="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>"></a>
-                                    <a href="javascript:;" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="edit label label-primary">Edit</a>
-                                    <a data-toggle="tooltip" title="Delete" data-placement="top" data-toggle="modal" data-target="#myModal_autocomplete" data-href="<?= user_url() . 'project/deleteImage' ?>" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="deleteImage label label-danger">
-                                        Delete
-                                    </a>
+                                ?>
+                                <div class="col-md-6">
                                     <?php
-                                }
-                            }else{
+                                    if (file_exists("uploads/project/" . $projectDetail[$j]->project_image)) {
+                                        $ext = pathinfo($projectDetail[$j]->project_image, PATHINFO_EXTENSION);
+                                        if ($ext == 'zip') {
+                                            ?>
+                                            <a href="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>" title="<?= $projectDetail[$j]->project_image ?>" data-gallery=""><img style="width:150px !important;" src="<?php echo base_url() . "public/front/img/zip.jpg"; ?>"></a>
+                                        <?php } else if ($ext == 'pdf') { ?>
+                                            <a href="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>" title="<?= $projectDetail[$j]->project_image ?>" data-gallery=""><img style="width:150px !important;" src="<?php echo base_url() . "public/front/img/pdf.jpg"; ?>"></a>
+                                        <?php } else if ($ext == 'doc' || $ext == 'docs' || $ext == 'docx') { ?>
+                                            <a href="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>" title="<?= $projectDetail[$j]->project_image ?>" data-gallery=""><img style="width:150px !important;" src="<?php echo base_url() . "public/front/img/doc.jpg"; ?>"></a>
+                                        <?php } else { ?>
+                                            <a href="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>" title="<?= $projectDetail[$j]->project_image ?>" data-gallery=""><img style="width:150px !important;" src="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>"></a>
+                                        <?php }
+                                        ?>
+
+                                        <a href="javascript:;" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="edit label label-primary">Edit</a>
+                                        <a data-toggle="tooltip" title="Delete" data-placement="top" data-toggle="modal" data-target="#myModal_autocomplete" data-href="<?= user_url() . 'project/deleteImage' ?>" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="deleteImage label label-danger">Delete</a> 
+                                        <a data-toggle="tooltip"  title="Download" href="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>"  download="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>" class="label label-warning" >Download</a> <br/>
+                                    <?php } ?>
+                                </div>
+                                <?php
+                            } else {
                                 echo '<h4>Project Files not found</h4>';
                             }
                         }
@@ -82,3 +96,4 @@
         </div>
     </div>
 </div>
+<br>
