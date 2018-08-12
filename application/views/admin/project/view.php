@@ -28,7 +28,7 @@
                                         ?>
 
                                         <!--<a href="javascript:;" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="edit label label-primary">Edit</a>-->
-                                        <a data-toggle="tooltip" title="Delete" data-placement="top" data-toggle="modal" data-target="#myModal_autocomplete" data-href="<?= user_url() . 'project/deleteImage' ?>" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="deleteImage label label-danger">Delete</a> 
+                                        <a data-toggle="tooltip" title="Delete" data-placement="top" data-toggle="modal" data-target="#myModal_autocomplete" data-href="<?= admin_url() . 'project/deleteImage' ?>" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="deleteImage label label-danger">Delete</a> 
                                         <a data-toggle="tooltip"  title="Download" href="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>"  download="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>" class="label label-warning" >Download</a> <br/>
                                     <?php } ?>
                                 </div>
