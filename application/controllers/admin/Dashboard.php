@@ -19,17 +19,22 @@ class Dashboard extends Admin_Controller {
         );
         
         $data['getProject'] = $this->this_model->getDetailV2();
-        
+       
+        $data['css'] = array(
+            'plugins/dataTables/datatables.min.css'
+        );
+
+        $data['js'] = array(
+            'plugins/dataTables/datatables.min.js',
+            'admin/signup.js',
+        );
         $data['css'] = array(
         );
         $data['css_plugin'] = array(
-
         );
-        $data['js_plugin'] = array(
-
-        );
+     
         $data['init'] = array(
-//            'Dashboard.init()',
+            'Singup.dashboardInit()',
         );
 
         $this->load->view(ADMIN_LAYOUT, $data);
