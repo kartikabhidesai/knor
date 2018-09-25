@@ -15,7 +15,7 @@
                                     <?php
                                     if (file_exists("uploads/project/" . $projectDetail[$j]->project_image)) {
                                         $ext = pathinfo($projectDetail[$j]->project_image, PATHINFO_EXTENSION);
-                                        if ($ext == 'zip' || $ext == 'sql') {
+                                        if ($ext == 'zip') {
                                             ?>
                                             <a href="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>" title="<?= $projectDetail[$j]->project_image ?>" data-gallery=""><img style="width:150px !important;" src="<?php echo base_url() . "public/front/img/zip.jpg"; ?>"></a>
                                         <?php } else if ($ext == 'pdf') { ?>
@@ -27,8 +27,8 @@
                                         <?php }
                                         ?>
 
-                                        <!--<a href="javascript:;" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="edit label label-primary">Edit</a>-->
-                                        <a data-toggle="tooltip" title="Delete" data-placement="top" data-toggle="modal" data-target="#myModal_autocomplete" data-href="<?= admin_url() . 'project/deleteImage' ?>" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="deleteImage label label-danger">Delete</a> 
+                                        <a href="javascript:;" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="edit label label-primary">Edit</a>
+                                        <a data-toggle="tooltip" title="Delete" data-placement="top" data-toggle="modal" data-target="#myModal_autocomplete" data-href="<?= user_url() . 'project/deleteImage' ?>" data-id="<?php echo $projectDetail[$j]->projectImageID; ?>" class="deleteImage label label-danger">Delete</a> 
                                         <a data-toggle="tooltip"  title="Download" href="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>"  download="<?php echo base_url() . "uploads/project/" . $projectDetail[$j]->project_image; ?>" class="label label-warning" >Download</a> <br/>
                                     <?php } ?>
                                 </div>

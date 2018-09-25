@@ -75,6 +75,14 @@ class Project extends Admin_Controller {
         }
         $this->load->view(ADMIN_LAYOUT, $data);
     }
+    
+      function deleteImage() {
+        if ($this->input->post()) {
+            $result = $this->this_model->deleteProjectImage($this->input->post());
+            echo json_encode($result);
+            exit();
+        }
+    }
 }
 
 ?>
