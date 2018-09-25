@@ -27,7 +27,7 @@
                     <div class="row" id="wiredup">
                         <h3>Wired Up North Inc.</h3>
 
-                        <p>Wired Up North is a full-service electrical contractor in Muskoka, Ontario. They offer electrical services for residential, commercial, renovations and new construction.</p>
+                        <p>Wired Up North is a full-service electrical contractor in Muskoka, Ontario. They offer electrical services for residential, commercial, renovations and new construction. We provided them with a custom designed logo and fresh branding initiative to allow them to stand out from their competitors.</p>
 
                         <img class="rectangle" src="<?= base_url()?>public/front/img/wiredupnorthlogo.jpg" alt="Wired Up Norh Logo" />
 

@@ -2,9 +2,9 @@
     <header class="masthead">
         <div class="container">
             <div class="intro-text">
-                <h3 class="intro-lead-in">HELLO, WE ARE KNOR GRAPHIC DESIGN SOLUTIONS</h3>
+                <h3 class="intro-lead-in">WE ARE KNOR GRAPHIC DESIGN SOLUTIONS</h3>
                 <h1 class="intro-heading text-uppercase">BRINGING LIFE INTO YOUR GREAT IDEAS</h1>
-                <p>We are a graphic design company creating innovative and
+                <p>We are a graphic design firm creating innovative and
                     <br>
                     <span>beautiful custom compositions for all your design needs.</span></p>
                 <a class="btn banner-button btn-xl text-uppercase js-scroll-trigger" href="#contact">Contact Us</a>
@@ -26,7 +26,7 @@
             	<img src="<?= base_url()?>public/front/img/Branding-Icon.png" width="100%" alt="branding">
             </span>
                     <h4 class="service-heading">BRANDING</h4>
-                    <p class="blackco">First impressions are important. We want to represent you well in your branding so that your first impression makes for an impressive impression.</p>
+                    <p class="blackco">First impressions are important. We create individualized custom branding packages that include everything from designing your logo to printing your stationary; to help make sure your first impression is a good one.</p>
                     <p class="text-muted">LOGOS</p>
                     <p class="text-muted">BRANDING</p>
                     <p class="text-muted">PACKAGES STATIONARY</p>
@@ -36,7 +36,7 @@
             	<img src="<?= base_url()?>public/front/img/Printing-Icon.png" width="100%" alt="branding">
             </span>
                     <h4 class="service-heading">PRINT DESIGN</h4>
-                    <p class="blackco">You have a message to tell and a product or service to promote. We would love to assist in a visually gripping way.</p>
+                    <p class="blackco">You have a message to tell the world. We create individualized and creative marketing packages, editorial designs, and advertisement promotions specific to your product and service to help you get your message out in a creative way.</p>
                     <p class="text-muted">MARKETING MATERIAL</p>
                     <p class="text-muted">EDITORIAL DESIGN</p>
                     <p class="text-muted">ADVERTISEMENT</p>
@@ -46,14 +46,14 @@
             	<img src="<?= base_url()?>public/front/img/Website-Icon.png" width="100%" alt="branding">
             </span>
                     <h4 class="service-heading">WEB DESIGN</h4>
-                    <p class="blackco">We understand that you are unique and so is your product and service. We design websites that make you stand apart from the rest.</p>
+                    <p class="blackco">We understand that you are unique, and so is your product and service. We design websites that make you stand apart from the rest.</p>
                     <p class="text-muted">WEB DESIGN & DEVELOPMENT</p>
                     <p class="text-muted">RESPONSIVE WEBSITES</p>
                     <p class="text-muted">SEARCH ENGINE OPTIMIZATION</p>
                 </div>
             </div>
             <div>
-                <p class="text-muted text-center font-weight-bold mt-4">THE ABOVE IS JUST A FEW OF THE PROFESSIONAL SERVICES WE OFFER. <a href="#">CONTACT US FOR MORE DETAILS.</a></p>
+                <p class="text-muted text-center font-weight-bold mt-4">These are a FEW OF THE PROFESSIONAL SERVICES WE OFFER. <a href="#">CONTACT US FOR FURTHER DETAILS.</a></p>
             </div>
         </div>
     </section>
@@ -64,21 +64,21 @@
                 <div class="col-lg-8 order-lg-2 text-white showcase-img" style="background-image: url('public/front/img/Homepage_Branding.jpg');"></div>
                 <div class="col-lg-4 order-lg-1 showcase-text">
                     <h2>BRANDING</h2>
-                    <p class="lead mb-0">Your brand is who you are, what you do, why you do it, and who you do it for. It represents you, your mission and purpose visually to your audience. This is why it is vital for branding to create interest and grab attention. We take this task seriously and would count it a privilege to provide you with a creative design that’s right for you.</p>
+                    <p class="lead mb-0">Your brand is who you are. What you do. Why you do it, and who you do it for. It represents you, your mission and purpose visually to your audience. It is vital for branding to create interest and grab attention. We specialize in providing creative brand designs that are right for you.</p>
                 </div>
             </div>
             <div class="row no-gutters orangebg">
                 <div class="col-lg-8 text-white showcase-img" style="background-image: url('public/front/img/Homepage_Print.jpg');"></div>
                 <div class="col-lg-4  showcase-text-or">
                     <h2>PRINT DESIGN</h2>
-                    <p class="lead mb-0">Print Design involves strategic planning and projecting of ideas both visually and textually. We sit down and listen to our clients to help us determine the scope of a project. With your input, we look at effective strategies to reach a particular audience and determine the message the design should portray. This includes selecting colour schemes, images, text styles and layout approaches in order to give our clients a strong visual voice among many.</p>
+                    <p class="lead mb-0">Print design involves strategic planning and projecting of ideas both visually and textually. During this process we work with you to discuss effective strategies to reach a particular audience and determine the message the design should portray. This includes selecting colour schemes, images, text styles and layout approaches in order to give you a strong visual voice.</p>
                 </div>
             </div>
             <div class="row no-gutters greybgdark">
                 <div class="col-lg-8 order-lg-2 text-white showcase-img" style="background-image: url('public/front/img/Homepage_Web.jpg');"></div>
                 <div class="col-lg-4  order-lg-1 showcase-text">
                     <h2>WEB DESIGN</h2>
-                    <p class="lead mb-0">A clean, user-friendly website is key when grabbing your target audiences’ attention, drawing them in and making it easy for them to navigate your website. Whatever your needs, we take a special interest in creating a website that represents you and your message. Custom web design and development, search engine optimization (SEO) and Secure Sockets Layer (SSL) are essential to ensure your website is secure and easily located with alluring design.</p>
+                    <p class="lead mb-0">A clean, user-friendly website is key when grabbing your target audiences’ attention. We specialize in custom web design and development, search engine optimization (SEO) and Secure Sockets Layer (SSL) to ensure your website is secure and easily located while captivating your audience visually.</p>
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
                 <div class="col-lg-4">
                     <h2 class="section-heading text-uppercase">About Us</h2>
                     <h4 class="text-primary">DRIVEN BY PURPOSE; DESIGNING WITH IMPACT!</h4>
-                    <p>Knor Graphic Design Solutions has been in the graphic design industry for over 25 years. We continuously strive to keep current with design trends in order to produce arresting design.</p>
+                    <p>Knor Graphic Design Solutions has been in the graphic design industry for over 25 years. It is our goal to be on the cutting edge of design trends while providing exceptional customer service to our clients.</p>
 
                     <p>We concur with Illustrator Christoph Niewmann who said, “Get rid of everything that is not essential to making a point.” and thereby keeping it profoundly simple, but effective.</p>
                 </div>
