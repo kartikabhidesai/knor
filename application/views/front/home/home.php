@@ -99,7 +99,7 @@
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
-                                    <h4 class="text-center"><span class="text-primary">HELLO,</span> IÂ´M ANDREW</h4>
+                                    <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M ANDREW</h4>
                                     <p class="text-center">CREATIVE DIRECTOR</p>
                                     <p>My desire and goal as a graphic designer is to make the invisible visible in a captivating way. I have been interested in art from an early age and believe that my creative bent, along with my life experience, makes me well-rounded as a graphic designer.</p>
                                     <p>I love to meet people and experience how each are so multi-faceted and unique. There is not one person who does not bring something to the table. That is what makes each project a new creative experience as I glean from your thoughts and input. This is what makes this field so incredibly rewarding.
@@ -115,7 +115,7 @@
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
-                                    <h4 class="text-center"><span class="text-primary">HELLO,</span> IÂ´M EMILY</h4>
+                                    <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M EMILY</h4>
                                     <p class="text-center">SENIOR GRAPHIC DESIGNER</p>
                                     <p>From a young age, IÂ´ve loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime.</p>
                                     <p>Being creative is one of my favourite things to do and helping our clients achieve a design they can be proud of is my goal and is the cherry on top of every project.
@@ -147,7 +147,7 @@
                 <div class="col-lg-6 col-sm-12 col-xs-12">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle" src="<?= base_url()?>public/front/img/andrew_small.jpg" alt="">
-                        <h4 class="text-center"><span class="text-primary">HELLO,</span> IÂ´M ANDREW</h4>
+                        <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M ANDREW 111111</h4>
                         <p class="text-center">CREATIVE DIRECTOR</p>
 
                         <p class="large text-muted text-justify">My desire and goal as a graphic designer is to make the invisible visible in a captivating way. I have been interested in art from an early age and believe that my creative bent, along with my life experience, makes me well-rounded as a graphic designer. I love to meet people and experience how each are so multi-faceted and unique. There is not one person who does not bring something to the table. That is what makes each project a new creative experience as I glean from your thoughts and input. This is what makes this field so incredibly rewarding.</p>
@@ -157,7 +157,7 @@
                 <div class="col-lg-6 col-sm-12 col-xs-12">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle" src="<?= base_url()?>public/front/img/Emily_small.jpg" alt="">
-                        <h4 class="text-center"><span class="text-primary">HELLO,</span> IÂ´M EMILY</h4>
+                        <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M EMILY</h4>
                         <p class="text-center">SENIOR GRAPHIC DESIGNER</p>
                         <p class="large text-muted text-justify">From a young age, IÂ´ve loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime. Being creative is one of my favourite things to do and helping our clients achieve a design they can be proud of is my goal and is the cherry on top of every project.</p>
                     </div>
