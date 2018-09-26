@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div>
-                <p class="text-muted text-center font-weight-bold mt-4">These are a FEW OF THE PROFESSIONAL SERVICES WE OFFER. <a href="#">CONTACT US FOR FURTHER DETAILS.</a></p>
+                <p class="text-muted text-center font-weight-bold mt-4">THESE ARE A FEW OF THE PROFESSIONAL SERVICES WE OFFER. <a href="#contact">CONTACT US FOR FURTHER DETAILS.</a></p>
             </div>
         </div>
     </section>

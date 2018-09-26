@@ -35,13 +35,16 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container-fluid">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                    <?php if ($pages == 'ourwork') { ?>
-                        <img class="logo" src="<?= base_url() ?>public/front/img/KnorGraphicsLogo_CLR.png" width="230px" alt="Knor Graphics White Logo" />   
-                    <?php } else { ?>
+
+                <?php if ($pages == 'ourwork') { ?>
+                    <a class="navbar-brand js-scroll-trigger" href="<?= base_url(); ?>">
+                        <img class="logo" src="<?= base_url() ?>public/front/img/KnorGraphicsLogo_CLR.png" width="230px" alt="Knor Graphics White Logo" />   </a>
+                <?php } else { ?>
+                    <a class="navbar-brand js-scroll-trigger" href="#page-top">
                         <img class="logo" src="<?= base_url() ?>public/front/img/KnorGraphicsLogo_White.png" width="230px" alt="Knor Graphics White Logo" />
-                    <?php } ?>
-                </a>
+                    </a>
+                <?php } ?>
+
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fa fa-bars"></i>
