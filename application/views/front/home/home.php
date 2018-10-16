@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div>
-                <p class="text-muted text-center font-weight-bold mt-4">These are a FEW OF THE PROFESSIONAL SERVICES WE OFFER. <a href="#">CONTACT US FOR FURTHER DETAILS.</a></p>
+                <p class="text-muted text-center font-weight-bold mt-4">THESE ARE A FEW OF THE PROFESSIONAL SERVICES WE OFFER. <a href="#contact">CONTACT US FOR FURTHER DETAILS.</a></p>
             </div>
         </div>
     </section>
@@ -99,7 +99,7 @@
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
-                                    <h4 class="text-center"><span class="text-primary">HELLO,</span> IÂ´M ANDREW</h4>
+                                    <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M ANDREW</h4>
                                     <p class="text-center">CREATIVE DIRECTOR</p>
                                     <p>My desire and goal as a graphic designer is to make the invisible visible in a captivating way. I have been interested in art from an early age and believe that my creative bent, along with my life experience, makes me well-rounded as a graphic designer.</p>
                                     <p>I love to meet people and experience how each are so multi-faceted and unique. There is not one person who does not bring something to the table. That is what makes each project a new creative experience as I glean from your thoughts and input. This is what makes this field so incredibly rewarding.
@@ -115,9 +115,9 @@
                         <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
-                                    <h4 class="text-center"><span class="text-primary">HELLO,</span> IÂ´M EMILY</h4>
+                                    <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M EMILY</h4>
                                     <p class="text-center">SENIOR GRAPHIC DESIGNER</p>
-                                    <p>From a young age, IÂ´ve loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime.</p>
+                                    <p>From a young age, I've loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime.</p>
                                     <p>Being creative is one of my favourite things to do and helping our clients achieve a design they can be proud of is my goal and is the cherry on top of every project.
                                     </p>
                                 </div>
@@ -140,14 +140,14 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <p class="large text-muted">Knor Graphic Design Solutions has been in the graphic design industry for over 25 years. We continuously strive to keep current with design trends in order to produce arresting design.
-                        <br> We concur with Illustrator Christoph Niewmann who said, â€œGet rid of everything that is not essential to making a point.â€� and thereby keeping it profoundly simple, but effective.</p>
+                        <br> We concur with Illustrator Christoph Niewmann who said, "Get rid of everything that is not essential to making a point." and thereby keeping it profoundly simple, but effective.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-sm-12 col-xs-12">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle" src="<?= base_url()?>public/front/img/andrew_small.jpg" alt="">
-                        <h4 class="text-center"><span class="text-primary">HELLO,</span> IÂ´M ANDREW</h4>
+                        <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M ANDREW</h4>
                         <p class="text-center">CREATIVE DIRECTOR</p>
 
                         <p class="large text-muted text-justify">My desire and goal as a graphic designer is to make the invisible visible in a captivating way. I have been interested in art from an early age and believe that my creative bent, along with my life experience, makes me well-rounded as a graphic designer. I love to meet people and experience how each are so multi-faceted and unique. There is not one person who does not bring something to the table. That is what makes each project a new creative experience as I glean from your thoughts and input. This is what makes this field so incredibly rewarding.</p>
@@ -157,9 +157,9 @@
                 <div class="col-lg-6 col-sm-12 col-xs-12">
                     <div class="team-member">
                         <img class="mx-auto rounded-circle" src="<?= base_url()?>public/front/img/Emily_small.jpg" alt="">
-                        <h4 class="text-center"><span class="text-primary">HELLO,</span> IÂ´M EMILY</h4>
+                        <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M EMILY</h4>
                         <p class="text-center">SENIOR GRAPHIC DESIGNER</p>
-                        <p class="large text-muted text-justify">From a young age, IÂ´ve loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime. Being creative is one of my favourite things to do and helping our clients achieve a design they can be proud of is my goal and is the cherry on top of every project.</p>
+                        <p class="large text-muted text-justify">From a young age, I've loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime. Being creative is one of my favourite things to do and helping our clients achieve a design they can be proud of is my goal and is the cherry on top of every project.</p>
                     </div>
                 </div>
 
