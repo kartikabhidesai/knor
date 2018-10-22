@@ -91,10 +91,15 @@ define('USER_LAYOUT', 'user/app');
 define('FRONT_LAYOUT', 'front/app');
 
 /* Email Setting constatnts */
-define("SMTP_HOST", "smtpout.secureserver.net");
-define("SMTP_PORT", '80');
-define("SMTP_USER", 'admin@helpdesk.experttech.ca');
-define("SMTP_PASS", '7688328jg');
+//define("SMTP_HOST", "mail.authsmtp.com");
+define("SMTP_HOST", "ssl://smtp.googlemail.com");
+//define("SMTP_PORT", '2525');
+//define("SMTP_PORT", '25');
+//define("SMTP_PORT", '465');
+define("SMTP_PORT", '587');
+define("SMTP_USER", 'ac75307');
+define("SMTP_PASS", '16i-EXP-MPS-bup');
+
 if($_SERVER['HTTP_HOST'] == "localhost"){
     define("IMAGES", 'http://' . $_SERVER['HTTP_HOST'] . '/address/public/asset/images/');
 }else{

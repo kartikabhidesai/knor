@@ -1,7 +1,6 @@
 <?php
 $to = "shaileshvanaliya91@gmail.com";
-$subject = "HTML email";
-
+$subject = "Contact-us mail";
 $message = "
 <html>
 <head>
@@ -9,16 +8,16 @@ $message = "
 </head>
 <body>
 <p>This email contains HTML Tags!</p>
-<table>
-<tr>
-<th>Firstname</th>
-<th>Lastname</th>
-</tr>
-<tr>
-<td>John</td>
-<td>Doe</td>
-</tr>
-</table>
+    <table>
+    <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    </tr>
+    <tr>
+    <td>John</td>
+    <td>Doe</td>
+    </tr>
+    </table>
 </body>
 </html>
 ";
@@ -28,9 +27,9 @@ $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
 // More headers
-$headers .= 'From: <webmaster@example.com>' . "\r\n";
-$headers .= 'Cc: myboss@example.com' . "\r\n";
+$headers .= "From: testshailesh1@gmail.com" . "\r\n";
+$headers .= "Cc: kartidesai123@gmail.com" . "\r\n";
 
-mail($to,$subject,$message,$headers);
-echo 'mail send';
+$result = mail($to,$subject,$message,$headers);
+echo $result . ' -- HI';exit;
 ?>

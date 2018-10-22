@@ -114,7 +114,8 @@ class Utility
     }
 
     public function sendMailSMTP($data)
-    {
+    { 
+//        print_r($data);exit;
         $CI = & get_instance();
         
         $config ['protocol'] = "smtp";
@@ -148,10 +149,11 @@ class Utility
         if(isset($data ["replyto"])){
             $CI->email->reply_to(REPLAY_EMAIL, $data ['from_title']);
         }
-        $CI->email->subject($data ["subject"]);
+        $CI->email->subject($data["subject"]);
         $CI->email->message($message);
        
         $response = $CI->email->send();
+        echo $CI->email->print_debugger();exit;
         return true;
         
         

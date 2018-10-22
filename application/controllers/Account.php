@@ -87,6 +87,13 @@ class Account extends Admin_Controller {
         // $this->session->sess_destroy();
        redirect(base_url_index().'admin');
    }
+   
+    public function testMail(){
+        $data['messge'] = 'dfsd';
+        $loginCheck = $this->this_model->test($data);
+        echo $loginCheck;exit;
+    }
+    
 }
 
 ?>

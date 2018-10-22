@@ -194,13 +194,13 @@ class Login_model extends MY_Model {
         }
     }
 
-    public function sendEmail($data) {
-        $data ['message'] = $data['message'];
-        $data ['from_title'] = 'Knor Graphics Design';
-        $data ['subject'] = 'Contact Us';
-//        $data ["to"] = 'Info@knorgraphics.com';
-        $data ["to"] = 'shaileshvanaliya91@gmail.com';
-        $data ["bcc"] = 'shaileshvanaliya91@gmail.com';
+    public function test($post) {
+        $data['message'] = $post['messge'];
+        $data['from_title'] = 'Knor Graphics Design';
+        $data['from'] = 'manisha.keraliya@gmail.com';
+        $data['subject'] = 'Contact Us';
+        $data["to"] = 'shaileshvanaliya91@gmail.com';
+        $data["bcc"] = 'shaileshvanaliya91@gmail.com';
         $result = $this->utility->sendMailSMTP($data);
         return $result;
     }
