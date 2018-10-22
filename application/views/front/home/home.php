@@ -117,7 +117,7 @@
                                 <div class="portfolio-hover-content">
                                     <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M EMILY</h4>
                                     <p class="text-center">SENIOR GRAPHIC DESIGNER</p>
-                                    <p>From a young age, IÂ´ve loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime.</p>
+                                    <p>From a young age, I've loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime.</p>
                                     <p>Being creative is one of my favourite things to do and helping our clients achieve a design they can be proud of is my goal and is the cherry on top of every project.
                                     </p>
                                 </div>
@@ -140,7 +140,7 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <p class="large text-muted">Knor Graphic Design Solutions has been in the graphic design industry for over 25 years. We continuously strive to keep current with design trends in order to produce arresting design.
-                        <br> We concur with Illustrator Christoph Niewmann who said, â€œGet rid of everything that is not essential to making a point.â€� and thereby keeping it profoundly simple, but effective.</p>
+                        <br> We concur with Illustrator Christoph Niewmann who said, "Get rid of everything that is not essential to making a point." and thereby keeping it profoundly simple, but effective.</p>
                 </div>
             </div>
             <div class="row">
@@ -159,7 +159,7 @@
                         <img class="mx-auto rounded-circle" src="<?= base_url()?>public/front/img/Emily_small.jpg" alt="">
                         <h4 class="text-center"><span class="text-primary">HELLO,</span> I'M EMILY</h4>
                         <p class="text-center">SENIOR GRAPHIC DESIGNER</p>
-                        <p class="large text-muted text-justify">From a young age, IÂ´ve loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime. Being creative is one of my favourite things to do and helping our clients achieve a design they can be proud of is my goal and is the cherry on top of every project.</p>
+                        <p class="large text-muted text-justify">From a young age, I've loved being creative, whether it meant drawing or working on a new DIY project. After finishing my advance diploma in Graphic Design and working as a freelance and full-time graphic designer for a few years. I joined the Knor Graphic Design Solutions team as their Senior Graphic Designer and partner in crime. Being creative is one of my favourite things to do and helping our clients achieve a design they can be proud of is my goal and is the cherry on top of every project.</p>
                     </div>
                 </div>
 

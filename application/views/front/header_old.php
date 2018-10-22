@@ -38,8 +38,7 @@
 
                 <?php if ($pages == 'ourwork') { ?>
                     <a class="navbar-brand js-scroll-trigger" href="<?= base_url(); ?>">
-                        <img class="logo" src="<?= base_url() ?>public/front/img/KnorGraphicsLogo_White.png" width="230px" alt="Knor Graphics White Logo" />   </a>
-                        <!--<img class="logo" src="<?= base_url() ?>public/front/img/KnorGraphicsLogo_CLR.png" width="230px" alt="Knor Graphics White Logo" />   </a>-->
+                        <img class="logo" src="<?= base_url() ?>public/front/img/KnorGraphicsLogo_CLR.png" width="230px" alt="Knor Graphics White Logo" />   </a>
                 <?php } else { ?>
                     <a class="navbar-brand js-scroll-trigger" href="#page-top">
                         <img class="logo" src="<?= base_url() ?>public/front/img/KnorGraphicsLogo_White.png" width="230px" alt="Knor Graphics White Logo" />
