@@ -91,12 +91,12 @@ define('USER_LAYOUT', 'user/app');
 define('FRONT_LAYOUT', 'front/app');
 
 /* Email Setting constatnts */
-//define("SMTP_HOST", "mail.authsmtp.com");
-define("SMTP_HOST", "ssl://smtp.googlemail.com");
-//define("SMTP_PORT", '2525');
+define("SMTP_HOST", "mail.authsmtp.com");
+//define("SMTP_HOST", "ssl://smtp.googlemail.com");
+define("SMTP_PORT", '2525');
 //define("SMTP_PORT", '25');
 //define("SMTP_PORT", '465');
-define("SMTP_PORT", '587');
+//define("SMTP_PORT", '587');
 define("SMTP_USER", 'ac75307');
 define("SMTP_PASS", '16i-EXP-MPS-bup');
 
