@@ -197,10 +197,10 @@ class Login_model extends MY_Model {
     public function test($post) {
         $data['message'] = $post['messge'];
         $data['from_title'] = 'Knor Graphics Design';
-        $data['from'] = 'manisha.keraliya@gmail.com';
+        $data['from'] = SMTP_USER;
         $data['subject'] = 'Contact Us';
-        $data["to"] = 'shaileshvanaliya91@gmail.com';
-        $data["bcc"] = 'shaileshvanaliya91@gmail.com';
+        $data["to"] = 'kartikdesai123@gmail.com';
+        $data["bcc"] = 'kartikdesai123@gmail.com';
         $result = $this->utility->sendMailSMTP($data);
         return $result;
     }

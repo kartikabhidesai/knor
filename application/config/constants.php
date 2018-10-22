@@ -97,7 +97,7 @@ define("SMTP_PORT", '2525');
 //define("SMTP_PORT", '25');
 //define("SMTP_PORT", '465');
 //define("SMTP_PORT", '587');
-define("SMTP_USER", 'ac75307');
+define("SMTP_USER", 'webmaster@knorgraphics.ca');
 define("SMTP_PASS", '16i-EXP-MPS-bup');
 
 if($_SERVER['HTTP_HOST'] == "localhost"){

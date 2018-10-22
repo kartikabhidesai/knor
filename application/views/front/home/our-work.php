@@ -23,7 +23,6 @@
                     </ul>
                 </div>
             </div>
-<<<<<<< HEAD
             <div class="worknavbar">
               <div class="worksubnav">
                 <button class="subnavbtn">BRANDING <i class="fa fa-caret-down"></i></button>
